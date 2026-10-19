@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+paper_reproduction/outputs/
+*.aux
+*.log
+*.out
+*.blg
+kaggle.json
+.env
