@@ -1,0 +1,340 @@
+{
+  "b4_same_columns_with_train_only_fit": true,
+  "b4_nan_columns": [
+    "Flow Bytes/s",
+    "Flow Packets/s"
+  ],
+  "lgb_single_flow_macro_f1_notebook_prep": 0.6654336353183121,
+  "lgb_single_flow_macro_f1_train_only_prep": 0.6667329590012798,
+  "single_feature_top10": [
+    [
+      "Fwd Packets/s",
+      0.26076754680362585
+    ],
+    [
+      "Flow IAT Mean",
+      0.25585380335869945
+    ],
+    [
+      "Flow Packets/s",
+      0.24584668159589657
+    ],
+    [
+      "Fwd IAT Min",
+      0.23796299787793512
+    ],
+    [
+      "Flow IAT Max",
+      0.23616389690093575
+    ],
+    [
+      "Flow IAT Std",
+      0.2292068786919052
+    ],
+    [
+      "Packet Length Max",
+      0.22423116112502817
+    ],
+    [
+      "Average Packet Size",
+      0.22187985549485711
+    ],
+    [
+      "Fwd IAT Mean",
+      0.21548511941876886
+    ],
+    [
+      "Flow IAT Min",
+      0.21533660867228965
+    ]
+  ],
+  "single_feature_all": [
+    [
+      "Fwd Packets/s",
+      0.26076754680362585
+    ],
+    [
+      "Flow IAT Mean",
+      0.25585380335869945
+    ],
+    [
+      "Flow Packets/s",
+      0.24584668159589657
+    ],
+    [
+      "Fwd IAT Min",
+      0.23796299787793512
+    ],
+    [
+      "Flow IAT Max",
+      0.23616389690093575
+    ],
+    [
+      "Flow IAT Std",
+      0.2292068786919052
+    ],
+    [
+      "Packet Length Max",
+      0.22423116112502817
+    ],
+    [
+      "Average Packet Size",
+      0.22187985549485711
+    ],
+    [
+      "Fwd IAT Mean",
+      0.21548511941876886
+    ],
+    [
+      "Flow IAT Min",
+      0.21533660867228965
+    ],
+    [
+      "Fwd IAT Max",
+      0.2141947536498635
+    ],
+    [
+      "Subflow Fwd Packets",
+      0.21058721203682473
+    ],
+    [
+      "Fwd IAT Std",
+      0.2101408847402897
+    ],
+    [
+      "Idle Max",
+      0.20725502904326437
+    ],
+    [
+      "Idle Min",
+      0.20598987292912946
+    ],
+    [
+      "Flow Duration",
+      0.2057126637818073
+    ],
+    [
+      "Idle Mean",
+      0.20528173817992762
+    ],
+    [
+      "Total Fwd Packet",
+      0.2009796191558648
+    ],
+    [
+      "Total Length of Fwd Packet",
+      0.19775061018883663
+    ],
+    [
+      "Subflow Fwd Bytes",
+      0.19502421126516123
+    ],
+    [
+      "Flow Bytes/s",
+      0.18853565429585453
+    ],
+    [
+      "Fwd IAT Total",
+      0.18523701701072426
+    ],
+    [
+      "Packet Length Mean",
+      0.17220580535664498
+    ],
+    [
+      "Fwd Packet Length Max",
+      0.1716213101917571
+    ],
+    [
+      "Bwd Init Win Bytes",
+      0.1661619844060962
+    ],
+    [
+      "Bwd Packets/s",
+      0.16496701903538324
+    ],
+    [
+      "Packet Length Std",
+      0.1608244762304023
+    ],
+    [
+      "Packet Length Variance",
+      0.1608244762304023
+    ],
+    [
+      "Fwd Packet Length Mean",
+      0.16028955031975986
+    ],
+    [
+      "Fwd Segment Size Avg",
+      0.16028955031975986
+    ],
+    [
+      "Total Length of Bwd Packet",
+      0.15209192218800588
+    ],
+    [
+      "FWD Init Win Bytes",
+      0.15096715219955106
+    ],
+    [
+      "ACK Flag Count",
+      0.15089465784111988
+    ],
+    [
+      "Fwd Packet Length Min",
+      0.14815503139739825
+    ],
+    [
+      "Fwd Header Length",
+      0.14527331548821945
+    ],
+    [
+      "Bwd Packet Length Max",
+      0.14390476373302552
+    ],
+    [
+      "Bwd IAT Total",
+      0.1419612569789906
+    ],
+    [
+      "Active Max",
+      0.14097626245168726
+    ],
+    [
+      "Bwd IAT Max",
+      0.14051115533691394
+    ],
+    [
+      "Bwd IAT Mean",
+      0.1385096502532689
+    ],
+    [
+      "Bwd Packet Length Min",
+      0.1365397481161771
+    ],
+    [
+      "Fwd Act Data Pkts",
+      0.13642655335126908
+    ],
+    [
+      "Active Min",
+      0.13625719697197392
+    ],
+    [
+      "Active Mean",
+      0.1356816865520862
+    ],
+    [
+      "Packet Length Min",
+      0.13519337897499725
+    ],
+    [
+      "Bwd Packet Length Mean",
+      0.1327935497986801
+    ],
+    [
+      "Bwd Segment Size Avg",
+      0.1327935497986801
+    ],
+    [
+      "Idle Std",
+      0.13076751989528188
+    ],
+    [
+      "Bwd Header Length",
+      0.12864930925667276
+    ],
+    [
+      "Bwd IAT Std",
+      0.12526725339760245
+    ],
+    [
+      "Total Bwd packets",
+      0.12422499029381878
+    ],
+    [
+      "Fwd Seg Size Min",
+      0.12394830282220812
+    ],
+    [
+      "SYN Flag Count",
+      0.12389389256153344
+    ],
+    [
+      "PSH Flag Count",
+      0.11357668456574374
+    ],
+    [
+      "Bwd IAT Min",
+      0.10310299058629309
+    ],
+    [
+      "Fwd Packet Length Std",
+      0.10290647056930884
+    ],
+    [
+      "FIN Flag Count",
+      0.09659296560849429
+    ],
+    [
+      "Subflow Bwd Bytes",
+      0.08907452556150577
+    ],
+    [
+      "Subflow Bwd Packets",
+      0.08798214673824865
+    ],
+    [
+      "Bwd Packet Length Std",
+      0.08704916226589718
+    ],
+    [
+      "Bwd Bytes/Bulk Avg",
+      0.0828274491802401
+    ],
+    [
+      "Down/Up Ratio",
+      0.0788594950782493
+    ],
+    [
+      "Bwd Bulk Rate Avg",
+      0.07819526448921638
+    ],
+    [
+      "Bwd Packet/Bulk Avg",
+      0.07545978081435922
+    ],
+    [
+      "Active Std",
+      0.06750711770469024
+    ],
+    [
+      "Fwd PSH Flags",
+      0.06220219797037828
+    ],
+    [
+      "RST Flag Count",
+      0.052142383199291806
+    ],
+    [
+      "ECE Flag Count",
+      0.040763760568336124
+    ]
+  ],
+  "tiny_trees": {
+    "depth1_tree_all_features": 0.10166631152227937,
+    "depth2_tree_all_features": 0.19824164886524184,
+    "depth3_tree_all_features": 0.28976656720356175
+  },
+  "lgb_single_flow_per_class_f1": {
+    "Benign": 0.6783907194866099,
+    "Brute Force": 0.27758234729772946,
+    "DDOS": 0.887197529977741,
+    "DOS": 0.9662693037117313,
+    "Mirai": 0.6605042016806723,
+    "Recon": 0.7178473700212831,
+    "Spoofing": 0.6617026176402856,
+    "Web-Based": 0.4739749927304449
+  }
+}

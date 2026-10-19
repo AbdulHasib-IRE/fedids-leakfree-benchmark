@@ -1,0 +1,40 @@
+{
+  "C2_dayfirst__window_purity": 0.9937225657242649,
+  "C2_dayfirst__lgb_proba_avg": 0.9451871667626166,
+  "C2_dayfirst__lgb_last_flow_only": 0.6654227551874301,
+  "timestamp_range_per_class_dayfirst": {
+    "min": {
+      "Benign": "2022-10-07 14:15:04",
+      "Brute Force": "2022-10-14 13:18:01",
+      "DDOS": "2022-09-06 12:57:16",
+      "DOS": "2022-08-02 12:06:04",
+      "Mirai": "2023-01-12 11:19:01",
+      "Recon": "2022-10-03 11:02:08",
+      "Spoofing": "2022-10-17 17:20:00",
+      "Web-Based": "2022-10-03 14:17:00"
+    },
+    "max": {
+      "Benign": "2022-10-08 18:13:58",
+      "Brute Force": "2022-10-17 12:02:00",
+      "DDOS": "2022-11-29 16:40:00",
+      "DOS": "2022-08-16 13:03:46",
+      "Mirai": "2023-01-18 11:51:21",
+      "Recon": "2022-10-04 09:31:02",
+      "Spoofing": "2022-11-16 16:24:58",
+      "Web-Based": "2023-02-14 13:04:57"
+    },
+    "count": {
+      "Benign": "7500",
+      "Brute Force": "543",
+      "DDOS": "7500",
+      "DOS": "7500",
+      "Mirai": "3000",
+      "Recon": "7500",
+      "Spoofing": "7500",
+      "Web-Based": "1350"
+    }
+  },
+  "tacnet_seqlen20_s42__C2_dayfirst": 0.7353229292693946,
+  "fedprox_a0.1_s42__C2_dayfirst": 0.7039597524655637,
+  "fedavg_noniid_a0.1_s42__C2_dayfirst": 0.652395124199825
+}

@@ -1,0 +1,76 @@
+{
+  "76_nonid_columns": {
+    "overall_rows_with_any_duplicate": 0.027436424560447533,
+    "within_class_dup_rate": {
+      "Benign": 0.01684,
+      "Brute Force": 0.009947499309201437,
+      "DDOS": 0.03416,
+      "DOS": 0.009200368014720588,
+      "Mirai": 0.04755,
+      "Recon": 0.0187,
+      "Spoofing": 0.03166,
+      "Web-Based": 0.015666666666666666
+    },
+    "val_share_with_exact_train_twin": 0.02144221923430755,
+    "val_share_twin_with_DIFFERENT_label": 0.002736300804378081,
+    "val_per_class_twin_share": {
+      "Benign": 0.018266666666666667,
+      "Brute Force": 0.01841620626151013,
+      "DDOS": 0.0272,
+      "DOS": 0.0084,
+      "Mirai": 0.041,
+      "Recon": 0.015733333333333332,
+      "Spoofing": 0.029733333333333334,
+      "Web-Based": 0.022962962962962963
+    },
+    "test_share_with_exact_train_twin": 0.02269242563630788,
+    "test_share_twin_with_DIFFERENT_label": 0.00294860000471776,
+    "test_per_class_twin_share": {
+      "Benign": 0.019066666666666666,
+      "Brute Force": 0.022099447513812154,
+      "DDOS": 0.028266666666666666,
+      "DOS": 0.009466666666666667,
+      "Mirai": 0.043333333333333335,
+      "Recon": 0.0184,
+      "Spoofing": 0.0308,
+      "Web-Based": 0.018518518518518517
+    }
+  },
+  "68_model_features": {
+    "overall_rows_with_any_duplicate": 0.027436424560447533,
+    "within_class_dup_rate": {
+      "Benign": 0.01684,
+      "Brute Force": 0.009947499309201437,
+      "DDOS": 0.03416,
+      "DOS": 0.009200368014720588,
+      "Mirai": 0.04755,
+      "Recon": 0.0187,
+      "Spoofing": 0.03166,
+      "Web-Based": 0.015666666666666666
+    },
+    "val_share_with_exact_train_twin": 0.02144221923430755,
+    "val_share_twin_with_DIFFERENT_label": 0.002736300804378081,
+    "val_per_class_twin_share": {
+      "Benign": 0.018266666666666667,
+      "Brute Force": 0.01841620626151013,
+      "DDOS": 0.0272,
+      "DOS": 0.0084,
+      "Mirai": 0.041,
+      "Recon": 0.015733333333333332,
+      "Spoofing": 0.029733333333333334,
+      "Web-Based": 0.022962962962962963
+    },
+    "test_share_with_exact_train_twin": 0.02269242563630788,
+    "test_share_twin_with_DIFFERENT_label": 0.00294860000471776,
+    "test_per_class_twin_share": {
+      "Benign": 0.019066666666666666,
+      "Brute Force": 0.022099447513812154,
+      "DDOS": 0.028266666666666666,
+      "DOS": 0.009466666666666667,
+      "Mirai": 0.043333333333333335,
+      "Recon": 0.0184,
+      "Spoofing": 0.0308,
+      "Web-Based": 0.018518518518518517
+    }
+  }
+}
