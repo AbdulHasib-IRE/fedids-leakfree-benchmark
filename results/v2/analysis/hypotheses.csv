@@ -1,0 +1,12 @@
+hypothesis,mean_diff,p_one_sided
+H1 centralized - FedAvg(a=0.1) >= 3 pp,0.13556531393046872,1.3677570588441794e-06
+H2 FedProx > FedAvg (a=0.1),-0.018691895330618748,0.9135799737104274
+H3a SCAFFOLD > FedAvg (a=0.1),-0.11413672406301009,0.9998193530059829
+H3b FedDyn > FedAvg (a=0.1),0.0002365654271622386,0.49479100984152713
+"H4 FedAdapt-F >= FedAvg + 1.5 pp (a=0.1, OSF-style criterion)",-0.007060222477833333,0.9885596656333844
+"H5 random > time-block split (fedavg, a=0.1)",0.09409569059102511,9.530491485954192e-05
+"H5 random > time-block split (fedprox, a=0.1)",0.07407593909066712,0.0006844193920158909
+"H5 random > time-block split (scaffold, a=0.1)",0.04255050558578752,0.02885895149602274
+"H5 random > time-block split (feddyn, a=0.1)",0.12150532788981598,0.001136755100874143
+"H5 random > time-block split (fedadapt, a=0.1)",0.09308194455191465,8.731084982943735e-06
+"H5 random > time-block split (fedadapt_pure, a=0.1)",0.09150241696194802,6.332703378794245e-05
