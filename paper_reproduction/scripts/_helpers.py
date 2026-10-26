@@ -13,7 +13,7 @@ plt.rcParams.update({'font.family': 'DejaVu Sans', 'font.size': 7.5, 'axes.label
                      'axes.spines.top': False, 'axes.spines.right': False, 'savefig.dpi': DPI})
 INK, MUTED, GRID = '#1f1f1f', '#5f5f5f', '#e3e3e3'
 
-# ---------- fixed encoding: each rule always has the same colour AND marker AND line style (Okabe-Ito) ----------
+# ---------- fixed encoding: each rule always has the same color AND marker AND line style (Okabe-Ito) ----------
 METHODS = ['fedavg', 'fedprox', 'scaffold', 'feddyn', 'fedadapt', 'fedadapt_pure']
 NAME = {'fedavg': 'FedAvg', 'fedprox': 'FedProx', 'scaffold': 'SCAFFOLD', 'feddyn': 'FedDyn',
         'fedadapt': 'FedAdapt-F', 'fedadapt_pure': 'FedAdapt-pure'}

@@ -58,7 +58,7 @@ def fig1():
     arrow(83.3, 97.25, 71.8, 97.25)
     # ---- 3 experiments ----
     band(46, 36, '3  Experiments')
-    box(5, 49, 36, 26, 'Centralised references\n(both leak-free splits)\n\nFA-MLP and MLP, 10 seeds\nLightGBM, XGBoost,\nrandom forest, k-NN,\ndecision tree, logistic\nregression, Gaussian NB', fs=6.0)
+    box(5, 49, 36, 26, 'Centralized references\n(both leak-free splits)\n\nFA-MLP and MLP, 10 seeds\nLightGBM, XGBoost,\nrandom forest, k-NN,\ndecision tree, logistic\nregression, Gaussian NB', fs=6.0)
     box(45, 49, 62, 26, '', fc='#eef5ea', ec=GREEN)
     ax.text(76, 72.4, 'Federated simulation (FA-MLP, 10 seeds per cell)', ha='center', va='center', fontsize=6.2, color=INK, fontweight='bold')
     box(48, 51.5, 26.5, 17, 'Client partitions\nK = 10, all clients\nper round, 100 rounds\nDirichlet α = 0.1, 0.5;\nIID; source IP', fs=5.8, fc='white')

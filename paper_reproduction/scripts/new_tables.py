@@ -1,4 +1,4 @@
-"""Numbers for the new tables of the revised CN paper; writes cn2/analysis/facts_rev.json and prints LaTeX rows."""
+"""Centralized-vs-federated metric summaries and partial-participation statistics; writes outputs/analysis/facts_rev.json."""
 import json, numpy as np, pandas as pd
 from pathlib import Path
 from scipy import stats
@@ -8,30 +8,22 @@ runs = pd.read_csv(W0/'export/grid_runs.csv'); runs = runs[~runs.diverged]
 SEEDS = [42, 123, 456, 789, 1011, 2024, 7, 99, 314, 2718]
 M = ['accuracy', 'precision_macro', 'recall_macro', 'f1_macro', 'f1_weighted', 'mcc']
 F = {}
-LBL = {'GaussianNB': 'Gaussian NB', 'LogReg': 'Logistic regression', 'DecisionTree': 'Decision tree', 'kNN': '$k$-NN ($k=5$)',
-       'RandomForest': 'Random forest', 'LightGBM': 'LightGBM', 'XGBoost': 'XGBoost', 'MLP': 'MLP', 'FA-MLP': 'FA-MLP'}
 ORDER = ['GaussianNB', 'LogReg', 'DecisionTree', 'kNN', 'RandomForest', 'LightGBM', 'XGBoost', 'MLP', 'FA-MLP']
-FLSEL = {'random': [('dirichlet0.1', 'fedavg', 'FedAvg, Dir.\\ $\\alpha=0.1$'), ('dirichlet0.5', 'feddyn', 'FedDyn, Dir.\\ $\\alpha=0.5$'),
+FLSEL = {'random': [('dirichlet0.1', 'fedavg', 'FedAvg, Dir 0.1'), ('dirichlet0.5', 'feddyn', 'FedDyn, Dir 0.5'),
                     ('iid', 'fedavg', 'FedAvg, IID'), ('iid', 'feddyn', 'FedDyn, IID')],
-         'time': [('dirichlet0.1', 'fedavg', 'FedAvg, Dir.\\ $\\alpha=0.1$'), ('dirichlet0.1', 'fedprox', 'FedProx, Dir.\\ $\\alpha=0.1$'),
+         'time': [('dirichlet0.1', 'fedavg', 'FedAvg, Dir 0.1'), ('dirichlet0.1', 'fedprox', 'FedProx, Dir 0.1'),
                   ('ip', 'fedavg', 'FedAvg, source IP'), ('ip', 'scaffold', 'SCAFFOLD, source IP')]}
 def fmt(v): return f'{v:.4f}'
 for sp in ('random', 'time'):
-    print(f'% ---- {sp}')
     best = {m: max(cen[cen.split == sp].groupby('model')[m].mean().max(), flm[flm.split == sp].groupby(['partition', 'method'])[m].mean().max()) for m in M}
     for mod in ORDER:
         d = cen[(cen.split == sp) & (cen.model == mod)]
         vals = [d[m].mean() for m in M]
         F.update({f'cen|{sp}|{mod}|{m}': float(v) for m, v in zip(M, vals)})
-        cells = [('\\textbf{%s}' if abs(v - best[m]) < 5e-5 else '%s') % fmt(v) for v, m in zip(vals, M)]
-        print(f'{LBL[mod]}{"$^{\\ast}$" if len(d) > 1 else ""} & ' + ' & '.join(cells) + ' \\\\')
-    print('\\midrule')
     for part, meth, lab in FLSEL[sp]:
         d = flm[(flm.split == sp) & (flm.partition == part) & (flm.method == meth)]; assert len(d) == 10
         vals = [d[m].mean() for m in M]; F.update({f'fl|{sp}|{part}|{meth}|{m}': float(v) for m, v in zip(M, vals)})
-        cells = [('\\textbf{%s}' if abs(v - best[m]) < 5e-5 else '%s') % fmt(v) for v, m in zip(vals, M)]
-        print(f'{lab}$^{{\\ast}}$ & ' + ' & '.join(cells) + ' \\\\')
-# FL vs best centralised gap on accuracy
+# FL vs best centralized gap on accuracy
 for sp in ('random', 'time'):
     g = cen[cen.split == sp].groupby('model')
     F[f'gap|{sp}|xgb_minus_famlp_f1'] = float(g.f1_macro.mean()['XGBoost'] - g.f1_macro.mean()['FA-MLP'])
@@ -42,9 +34,8 @@ for sp in ('random', 'time'):
         for c in ('Brute Force', 'Web-Based', 'Mirai', 'Spoofing', 'Benign'): F[f'cen|{sp}|{mod}|f1_{c}'] = float(d[f'f1_{c}'].mean())
 # ---- partial participation ----
 def last_n(o, R): return float(np.mean([h['test_macro_f1'] for h in o['history'] if h['round'] in (R - 20, R - 10, R)]))
-print('% ---- partial participation')
 P = []
-for part, st, lab in (('iid', 'random_iid', 'IID'), ('dirichlet0.5', 'random_dirichlet0.5', 'Dir.\\ $\\alpha=0.5$')):
+for part, st, lab in (('iid', 'random_iid', 'IID'), ('dirichlet0.5', 'random_dirichlet0.5', 'Dir 0.5')):
     for reg, lab2 in (('K10', '10 / all / 100'), ('K50_R100', '50 / 10 / 100'), ('K50_R500', '50 / 10 / 500')):
         v = {}
         for m in ('fedavg', 'feddyn'):
@@ -59,8 +50,6 @@ ps = np.array([r['p'] for r in P]); o = np.argsort(ps); hp = np.empty(6); run = 
 for i, j in enumerate(o): run = max(run, min(1, (6 - i) * ps[j])); hp[j] = run
 for r, h in zip(P, hp):
     r['holm'] = h; F.update({f'pp|{r["part"]}|{r["reg"]}|{k}': float(r[k]) for k in ('a', 'sa', 'b', 'sb', 'd', 'lo', 'hi', 'w', 'p', 'holm')})
-    pv = '$<$0.0001' if h < 1e-4 else f'{h:.4f}'
-    print(f'{r["lab"]} & {r["lab2"]} & {r["a"]:.4f} ({r["sa"]:.4f}) & {r["b"]:.4f} ({r["sb"]:.4f}) & {r["d"]:+.2f} & [{r["lo"]:.2f}, {r["hi"]:.2f}] & {r["w"]}/10 & {pv} \\\\')
 # rise of FedAvg IID between round 100 and 500 in the 500-round runs
 for part in ('iid', 'dirichlet0.5'):
     for m in ('fedavg', 'feddyn'):

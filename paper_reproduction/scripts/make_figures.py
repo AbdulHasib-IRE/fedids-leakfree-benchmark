@@ -23,7 +23,7 @@ plt.rcParams.update({'font.family': 'DejaVu Sans', 'font.size': 7.5, 'axes.label
                      'axes.spines.top': False, 'axes.spines.right': False, 'savefig.dpi': DPI})
 INK, MUTED, GRID = '#1f1f1f', '#5f5f5f', '#e3e3e3'
 
-# ---------- fixed encoding: each rule always has the same colour AND marker AND line style (Okabe-Ito) ----------
+# ---------- fixed encoding: each rule always has the same color AND marker AND line style (Okabe-Ito) ----------
 METHODS = ['fedavg', 'fedprox', 'scaffold', 'feddyn', 'fedadapt', 'fedadapt_pure']
 NAME = {'fedavg': 'FedAvg', 'fedprox': 'FedProx', 'scaffold': 'SCAFFOLD', 'feddyn': 'FedDyn',
         'fedadapt': 'FedAdapt-F', 'fedadapt_pure': 'FedAdapt-pure'}
@@ -175,7 +175,7 @@ def fig3():
                         mec='white', mew=0.3, elinewidth=0.7, capsize=1.2, label=NAME[m])
         cref = cen[(cen.split == split) & (cen.model == 'FA-MLP')].test_macro_f1.mean()
         ax.axhline(cref, color=MUTED, lw=0.7, ls=(0, (4, 2)), label='_ref')
-        ax.text(len(sets) - 0.5, cref + 0.004, f'Centralised FA-MLP {cref:.3f}', ha='right', va='bottom', fontsize=6.2, color=MUTED)
+        ax.text(len(sets) - 0.5, cref + 0.004, f'Centralized FA-MLP {cref:.3f}', ha='right', va='bottom', fontsize=6.2, color=MUTED)
         ax.set_xticks(range(len(sets))); ax.set_xticklabels([SET_LABEL[s] for s in sets]); ax.set_xlim(-0.5, len(sets) - 0.5)
         ax.set_ylabel('Test macro-F1 (mean ± SD, 10 seeds)')
         lo = (A[A.setting.isin(sets)]['mean'] - A[A.setting.isin(sets)]['std']).min()
@@ -326,7 +326,7 @@ def effect_rows():
     pos = TB[(TB.p_holm < 0.05) & (TB.diff_mean > 0)].diff_mean * 100
     fa_row = TB[(TB.setting == 'random_dirichlet0.1') & (TB.method == 'fedadapt')].iloc[0]
     return [('Label-grouped windows\n(lift, 9 checkpoints)', lift.mean(), lift.min(), lift.max(), '#7a7a7a'),
-            ('Federated vs centralised\n(FedAvg, α=0.1)', (fa - fav) * 100, None, None, '#7a7a7a'),
+            ('Federated vs centralized\n(FedAvg, α=0.1)', (fa - fav) * 100, None, None, '#7a7a7a'),
             ('Time-block split\n(cost, 17 rule–partition pairs)', float(np.mean(cost)), min(cost), max(cost), '#7a7a7a'),
             ('Best rule vs FedAvg\n(Holm-significant gains)', pos.max(), pos.min(), pos.max(), '#0072B2'),
             ('FedAdapt-F vs FedAvg\n(α=0.1, 95% CI)', fa_row.diff_mean * 100, fa_row.ci_lo * 100, fa_row.ci_hi * 100, '#0072B2')]
