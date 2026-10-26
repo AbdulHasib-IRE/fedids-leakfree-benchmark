@@ -1,9 +1,10 @@
 cff-version: 1.2.0
 message: "If you use this software or these results, please cite it as below."
 title: "fedids-leakfree-benchmark: leak-free federated intrusion detection benchmark on CIC IoT-DIAD 2024"
-version: 1.0.0
-date-released: 2026-10-19
+version: 1.0.1
+date-released: 2026-10-20
 license: MIT
+doi: "10.5281/zenodo.23483716"
 repository-code: "https://github.com/AbdulHasib-IRE/fedids-leakfree-benchmark"
 authors:
   - family-names: Hasib
