@@ -1,0 +1,127 @@
+file,n_rounds,rounds_1_to_N,round1_f1,final_f1,flag
+ablation_V0_full_a0.5_s123.json,20,True,0.5386,0.9666,cold
+ablation_V0_full_a0.5_s42.json,20,True,0.5278,0.9715,cold
+ablation_V0_full_a0.5_s456.json,20,True,0.6047,0.9636,cold
+ablation_V1_no_attention_a0.5_s123.json,20,True,0.5441,0.9068,cold
+ablation_V1_no_attention_a0.5_s42.json,20,True,0.6742,0.9671,cold
+ablation_V1_no_attention_a0.5_s456.json,20,True,0.5545,0.9533,cold
+ablation_V2_single_scale_cnn_a0.5_s123.json,20,True,0.5382,0.9495,cold
+ablation_V2_single_scale_cnn_a0.5_s42.json,20,True,0.5774,0.9594,cold
+ablation_V2_single_scale_cnn_a0.5_s456.json,20,True,0.5894,0.9481,cold
+ablation_V3_no_bilstm_a0.5_s123.json,20,True,0.5512,0.9593,cold
+ablation_V3_no_bilstm_a0.5_s42.json,20,True,0.5855,0.9563,cold
+ablation_V3_no_bilstm_a0.5_s456.json,20,True,0.5252,0.9601,cold
+ablation_V4_no_batchnorm_a0.5_s123.json,20,True,0.638,0.9656,cold
+ablation_V4_no_batchnorm_a0.5_s42.json,20,True,0.5745,0.9761,cold
+ablation_V4_no_batchnorm_a0.5_s456.json,20,True,0.6921,0.9711,cold
+ablation_V5_no_dropout_a0.5_s123.json,20,True,0.5203,0.8996,cold
+ablation_V5_no_dropout_a0.5_s42.json,20,True,0.5314,0.9641,cold
+ablation_V5_no_dropout_a0.5_s456.json,20,True,0.5236,0.9245,cold
+ablation_V6_smaller_head_a0.5_s123.json,20,True,0.6129,0.9691,cold
+ablation_V6_smaller_head_a0.5_s42.json,20,True,0.6212,0.9677,cold
+ablation_V6_smaller_head_a0.5_s456.json,20,True,0.6424,0.9641,cold
+ablation_V7_no_smote_a0.5_s123.json,20,True,0.7117,0.9608,cold
+ablation_V7_no_smote_a0.5_s42.json,20,True,0.5523,0.9709,cold
+ablation_V7_no_smote_a0.5_s456.json,20,True,0.6963,0.9658,cold
+ablation_V8_no_class_weighting_a0.5_s123.json,20,True,0.5395,0.9681,cold
+ablation_V8_no_class_weighting_a0.5_s42.json,20,True,0.528,0.9709,cold
+ablation_V8_no_class_weighting_a0.5_s456.json,20,True,0.633,0.9512,cold
+ablation_V9_unidirectional_lstm_a0.5_s123.json,20,True,0.6739,0.9638,cold
+ablation_V9_unidirectional_lstm_a0.5_s42.json,20,True,0.7506,0.9617,check
+ablation_V9_unidirectional_lstm_a0.5_s456.json,20,True,0.6585,0.9526,cold
+aemp_a0.1_s123.json,20,True,0.6738,0.9419,cold
+aemp_a0.1_s42.json,20,True,0.4743,0.9165,cold
+aemp_a0.1_s456.json,20,True,0.9554,0.9465,LIKELY WARM-START
+cnn_fedavg_a0.1_s123.json,20,True,0.4666,0.8639,cold
+cnn_fedavg_a0.1_s42.json,20,True,0.4333,0.8728,cold
+cnn_fedavg_a0.1_s456.json,20,True,0.5042,0.8944,cold
+cnn_fedprox_a0.1_s123.json,20,True,0.4574,0.8805,cold
+cnn_fedprox_a0.1_s42.json,20,True,0.4469,0.8699,cold
+cnn_fedprox_a0.1_s456.json,20,True,0.4999,0.8952,cold
+fedadapt_a0.1_s123.json,20,True,0.9198,0.9128,LIKELY WARM-START
+fedadapt_a0.1_s42.json,20,True,0.5204,0.8966,cold
+fedadapt_a0.1_s456.json,20,True,0.8555,0.9547,LIKELY WARM-START
+fedadapt_a0.5_s123.json,20,True,0.9726,0.9713,LIKELY WARM-START
+fedadapt_a0.5_s42.json,20,True,0.9686,0.9723,LIKELY WARM-START
+fedadapt_a0.5_s456.json,20,True,0.9722,0.9725,LIKELY WARM-START
+fedadapt_a1.0_s123.json,20,True,0.9737,0.9717,LIKELY WARM-START
+fedadapt_a1.0_s42.json,20,True,0.9722,0.9726,LIKELY WARM-START
+fedadapt_a1.0_s456.json,20,True,0.9709,0.9725,LIKELY WARM-START
+fedadapt_ema_a0.1_s123.json,20,True,0.8111,0.9543,check
+fedadapt_ema_a0.1_s42.json,20,True,0.4989,0.8417,cold
+fedadapt_ema_a0.1_s456.json,20,True,0.7223,0.9532,check
+fedadapt_sharp_a0.1_s123.json,20,True,0.8349,0.9552,check
+fedadapt_sharp_a0.1_s42.json,20,True,0.599,0.851,cold
+fedadapt_sharp_a0.1_s456.json,20,True,0.7852,0.9512,check
+fedavg_iid_s123.json,20,True,0.9012,0.9706,n/a
+fedavg_iid_s42.json,20,True,0.8858,0.9708,n/a
+fedavg_iid_s456.json,20,True,0.9025,0.9683,n/a
+fedavg_noniid_a0.1_s123.json,20,True,0.4996,0.923,n/a
+fedavg_noniid_a0.1_s42.json,20,True,0.3698,0.905,n/a
+fedavg_noniid_a0.1_s456.json,20,True,0.4922,0.9139,n/a
+fedavg_noniid_a0.5_s123.json,20,True,0.9567,0.9688,n/a
+fedavg_noniid_a0.5_s42.json,20,True,0.544,0.9681,n/a
+fedavg_noniid_a0.5_s456.json,20,True,0.9697,0.9698,n/a
+fedavg_noniid_a1.0_s123.json,20,True,0.97,0.9695,n/a
+fedavg_noniid_a1.0_s42.json,20,True,0.9694,0.9709,n/a
+fedavg_noniid_a1.0_s456.json,20,True,0.9691,0.97,n/a
+fedentropy_a0.1_s123.json,20,True,0.9185,0.9492,LIKELY WARM-START
+fedentropy_a0.1_s42.json,20,True,0.5074,0.8604,cold
+fedentropy_a0.1_s456.json,20,True,0.9595,0.9619,LIKELY WARM-START
+fedentropy_a0.5_s123.json,20,True,0.9724,0.9723,LIKELY WARM-START
+fedentropy_a0.5_s42.json,20,True,0.9686,0.9726,LIKELY WARM-START
+fedentropy_a0.5_s456.json,20,True,0.9726,0.9734,LIKELY WARM-START
+fedentropy_a1.0_s123.json,20,True,0.9733,0.9742,LIKELY WARM-START
+fedentropy_a1.0_s42.json,20,True,0.9743,0.9729,LIKELY WARM-START
+fedentropy_a1.0_s456.json,20,True,0.9709,0.9752,LIKELY WARM-START
+fedlbw_a0.1_s123.json,20,True,0.89,0.9406,LIKELY WARM-START
+fedlbw_a0.1_s42.json,20,True,0.5101,0.8911,cold
+fedlbw_a0.1_s456.json,20,True,0.9269,0.949,LIKELY WARM-START
+fedprox_a0.1_s123.json,20,True,0.9437,0.9578,LIKELY WARM-START
+fedprox_a0.1_s42.json,20,True,0.4454,0.9383,cold
+fedprox_a0.1_s456.json,20,True,0.9417,0.9636,LIKELY WARM-START
+fedprox_a0.5_s123.json,20,True,0.9714,0.9798,LIKELY WARM-START
+fedprox_a0.5_s42.json,20,True,0.956,0.9773,LIKELY WARM-START
+fedprox_a0.5_s456.json,20,True,0.9794,0.9775,LIKELY WARM-START
+fedprox_a1.0_s123.json,20,True,0.9794,0.9797,LIKELY WARM-START
+fedprox_a1.0_s42.json,20,True,0.9803,0.9818,LIKELY WARM-START
+fedprox_a1.0_s456.json,20,True,0.9805,0.9811,LIKELY WARM-START
+fedprox_adapt_a0.1_s123.json,20,True,0.7955,0.9574,check
+fedprox_adapt_a0.1_s42.json,20,True,0.5181,0.9106,cold
+fedprox_adapt_a0.1_s456.json,20,True,0.8825,0.9397,LIKELY WARM-START
+nbaiot_fedavg_a0.05_s123.json,20,True,0.5556,1.0,n/a
+nbaiot_fedavg_a0.05_s42.json,20,True,0.9791,1.0,n/a
+nbaiot_fedavg_a0.05_s456.json,20,True,0.5634,1.0,n/a
+nbaiot_fedavg_a0.5_s123.json,20,True,1.0,1.0,n/a
+nbaiot_fedavg_a0.5_s42.json,20,True,1.0,1.0,n/a
+nbaiot_fedavg_a0.5_s456.json,20,True,1.0,1.0,n/a
+nbaiot_fedprox_a0.05_s123.json,20,True,0.5552,1.0,n/a
+nbaiot_fedprox_a0.05_s42.json,20,True,0.5578,1.0,n/a
+nbaiot_fedprox_a0.05_s456.json,20,True,0.9413,1.0,n/a
+nbaiot_fedprox_a0.5_s123.json,20,True,1.0,1.0,n/a
+nbaiot_fedprox_a0.5_s42.json,20,True,1.0,1.0,n/a
+nbaiot_fedprox_a0.5_s456.json,20,True,1.0,1.0,n/a
+participation_fedavg_a0.1_C0.5_s123.json,20,True,0.2721,0.9092,n/a
+participation_fedavg_a0.1_C0.5_s42.json,20,True,0.3002,0.7359,n/a
+participation_fedavg_a0.1_C0.5_s456.json,20,True,0.3189,0.7964,n/a
+participation_fedprox_a0.1_C0.5_s123.json,20,True,0.2779,0.8919,n/a
+participation_fedprox_a0.1_C0.5_s42.json,20,True,0.2938,0.7407,n/a
+participation_fedprox_a0.1_C0.5_s456.json,20,True,0.3272,0.8034,n/a
+participation_fedprox_mu0.01_a0.1_C0.5_s123.json,20,True,0.24,0.8736,n/a
+participation_fedprox_mu0.01_a0.1_C0.5_s42.json,20,True,0.2435,0.7939,n/a
+participation_fedprox_mu0.01_a0.1_C0.5_s456.json,20,True,0.3303,0.7501,n/a
+participation_fedprox_mu0.1_a0.1_C0.5_s123.json,20,True,0.2101,0.8306,n/a
+participation_fedprox_mu0.1_a0.1_C0.5_s42.json,20,True,0.1913,0.7605,n/a
+participation_fedprox_mu0.1_a0.1_C0.5_s456.json,20,True,0.225,0.8125,n/a
+robustness_fedavg_a0.1_malicious20pct_s123.json,20,True,0.2369,0.8932,n/a
+robustness_fedavg_a0.1_malicious20pct_s42.json,20,True,0.2261,0.7974,n/a
+robustness_fedavg_a0.1_malicious20pct_s456.json,20,True,0.2335,0.908,n/a
+robustness_fedprox_a0.1_malicious20pct_s123.json,20,True,0.2316,0.8583,n/a
+robustness_fedprox_a0.1_malicious20pct_s42.json,20,True,0.2244,0.8877,n/a
+robustness_fedprox_a0.1_malicious20pct_s456.json,20,True,0.2293,0.908,n/a
+transformer_fedavg_a0.1_s123.json,20,True,0.4764,0.9623,cold
+transformer_fedavg_a0.1_s42.json,20,True,0.5109,0.9676,cold
+transformer_fedavg_a0.1_s456.json,20,True,0.5315,0.9241,cold
+transformer_fedprox_a0.1_s123.json,20,True,0.4792,0.9644,cold
+transformer_fedprox_a0.1_s42.json,20,True,0.506,0.9669,cold
+transformer_fedprox_a0.1_s456.json,20,True,0.5345,0.9521,cold

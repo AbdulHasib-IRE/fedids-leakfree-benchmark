@@ -1,0 +1,82 @@
+{
+  "window_purity": {
+    "label_grouped": 1.0,
+    "random_order": 0.0,
+    "time_ordered": 0.9937225657242649
+  },
+  "runs": [
+    {
+      "model": "FedAvg a=0.1",
+      "seed": 42,
+      "checkpoint": "fedavg_noniid_a0.1_s42_weights.npy",
+      "label_grouped": 0.9050354593816632,
+      "random_order": 0.12098275937822645,
+      "time_ordered": 0.652395124199825
+    },
+    {
+      "model": "FedAvg a=0.1",
+      "seed": 123,
+      "checkpoint": "fedavg_noniid_a0.1_s123_weights.npy",
+      "label_grouped": 0.9229990946428914,
+      "random_order": 0.11874444310018352,
+      "time_ordered": 0.6934498043182624
+    },
+    {
+      "model": "FedAvg a=0.1",
+      "seed": 456,
+      "checkpoint": "fedavg_noniid_a0.1_s456_weights.npy",
+      "label_grouped": 0.9138816462789086,
+      "random_order": 0.121515099316121,
+      "time_ordered": 0.6625708457928072
+    },
+    {
+      "model": "FedProx a=0.1",
+      "seed": 42,
+      "checkpoint": "fedprox_a0.1_s42_weights.npy",
+      "label_grouped": 0.938291095872485,
+      "random_order": 0.11982777102891,
+      "time_ordered": 0.7039597524655637
+    },
+    {
+      "model": "FedProx a=0.1",
+      "seed": 123,
+      "checkpoint": "fedprox_a0.1_s123_weights.npy",
+      "label_grouped": 0.957775286543149,
+      "random_order": 0.12118324294669544,
+      "time_ordered": 0.7079801744554222
+    },
+    {
+      "model": "FedProx a=0.1",
+      "seed": 456,
+      "checkpoint": "fedprox_a0.1_s456_weights.npy",
+      "label_grouped": 0.9635625060759944,
+      "random_order": 0.11662565308289269,
+      "time_ordered": 0.7188564563598235
+    },
+    {
+      "model": "TACNet centralised",
+      "seed": 42,
+      "checkpoint": "tacnet_seqlen20_s42.keras",
+      "label_grouped": 0.9705678614574164,
+      "random_order": 0.13838674373152354,
+      "time_ordered": 0.7353229292693946
+    },
+    {
+      "model": "TACNet centralised",
+      "seed": 123,
+      "checkpoint": "tacnet_seqlen20_s123.keras",
+      "label_grouped": 0.9637497742842003,
+      "random_order": 0.12670200023702066,
+      "time_ordered": 0.7100186491640096
+    },
+    {
+      "model": "TACNet centralised",
+      "seed": 456,
+      "checkpoint": "tacnet_seqlen20_s456.keras",
+      "label_grouped": 0.9623826013535876,
+      "random_order": 0.1339359704680594,
+      "time_ordered": 0.6714394933649778
+    }
+  ],
+  "missing": []
+}

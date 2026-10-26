@@ -1,0 +1,1 @@
+{"lr": 0.3, "batch": 256, "rounds": 100, "momentum": 0.9, "clip_norm": 1.0, "mu": 0.01, "dyn_alpha": 0.001}

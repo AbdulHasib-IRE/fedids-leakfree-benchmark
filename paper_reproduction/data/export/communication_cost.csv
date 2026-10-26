@@ -1,0 +1,7 @@
+method,params,floats_per_client_per_round_up,floats_per_client_per_round_down,total_MB_100_rounds_10_clients_fp32
+fedavg,56284,56284,56284,450.272
+fedprox,56284,56284,56284,450.272
+scaffold,56284,112568,112568,900.544
+feddyn,56284,56284,56284,450.272
+fedadapt,56284,56284,56284,450.272
+fedadapt_pure,56284,56284,56284,450.272
